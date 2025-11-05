@@ -17,5 +17,8 @@
         "path": "./themes/polyms-color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.3"
   }
 }
