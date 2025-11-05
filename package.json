@@ -1,0 +1,21 @@
+{
+  "name": "polyms",
+  "displayName": "Polyms",
+  "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Polyms",
+        "uiTheme": "vs-dark",
+        "path": "./themes/polyms-color-theme.json"
+      }
+    ]
+  }
+}
