@@ -1,14 +1,24 @@
 {
-  "name": "polyms",
+  "name": "vscode",
   "displayName": "Polyms",
   "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
   "version": "0.0.1",
+  "publisher": "polyms",
   "engines": {
     "vscode": "^1.105.0"
   },
   "categories": [
-    "Themes"
+    "Themes",
+    "Other"
   ],
+  "keywords": [
+    "icon-theme",
+    "theme",
+    "polyms"
+  ],
+  "homepage": "https://github.com/polyms/vscode",
+  "icon": "assets/logo.png",
+  "activationEvents": [],
   "contributes": {
     "themes": [
       {
@@ -16,9 +26,44 @@
         "uiTheme": "vs-dark",
         "path": "./themes/polyms-color-theme.json"
       }
+    ],
+    "iconThemes": [
+      {
+        "id": "polyms-icons",
+        "label": "Polyms",
+        "path": "./themes/polyms-icons.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "polyms.helloWorld",
+        "title": "Hello World"
+      }
     ]
   },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "vscode:prepublish": "pnpm run package",
+    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package1": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.3"
+    "@biomejs/biome": "^2.3.3",
+    "@types/node": "^24.10.0",
+    "@types/vscode": "^1.105.0",
+    "@vscode/vsce": "^3.6.2",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.9.3"
   }
 }

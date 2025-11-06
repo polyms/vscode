@@ -1,0 +1,386 @@
+{
+  "hidesExplorerArrows": true,
+  "file": "_file",
+  "folder": "_folder",
+  "folderExpanded": "_folder_open",
+  "fileExtensions": {
+    "map": "_f_srcmap",
+
+    "png": "_f_img",
+    "jpg": "_f_img",
+    "jpeg": "_f_img",
+    "gif": "_f_img",
+    "bmp": "_f_img",
+    "tiff": "_f_img",
+    "svgz": "_f_img",
+    "ico": "_f_img",
+    "webp": "_f_img",
+    "avif": "_f_img",
+    "psd": "_f_img",
+
+    "service.ts": "_f_links",
+
+    "zip": "_f_zip",
+    "gz": "_f_zip",
+
+    "xml": "_f_xml",
+
+    "yml": "_f_yaml",
+    "yaml": "_f_yaml",
+
+    "sass": "_f_sass",
+    "scss": "_f_scss",
+    "css": "_f_css",
+
+    "svg": "_f_svg",
+
+    "html": "_f_html",
+
+    "js": "_f_js",
+    "cjs": "_f_js",
+    "esx": "_f_js",
+    "mjs": "_f_js",
+
+    "patch": "_f_git",
+
+    "md": "_f_markdown",
+    "markdown": "_f_markdown",
+
+    "d.ts": "_f_typescriptdef",
+    "ts": "_f_typescript",
+
+    "tsx": "_f_react",
+    "jsx": "_f_react",
+
+    "code-workplace": "_f_vscode",
+    "vscodeignore": "_f_vscode",
+    "vsix": "_f_vscode",
+    "vsixmanifest": "_f_vscode",
+
+    "json": "_f_json",
+    "json5": "_f_json",
+    "jsonl": "_f_json",
+    "ndjson": "_f_json",
+    "tsbuildinfo": "_f_json"
+  },
+  "fileNames": {
+    "CHANGELOG.md": "_f_changelog",
+
+    ".copilotignore": "_f_copilot",
+
+    "Dockerfile": "_f_docker",
+    "compose.yaml": "_f_docker",
+    "compose.yml": "_f_docker",
+    "docker-compose.yaml": "_f_docker",
+    "docker-compose.yml": "_f_docker",
+
+    ".eslintrc.base.yml": "_f_eslint",
+    ".eslintrc.base.yaml": "_f_eslint",
+    ".eslintrc.base.json": "_f_eslint",
+    ".eslintrc.yml": "_f_eslint",
+    ".eslintrc.yaml": "_f_eslint",
+    ".eslintrc.json": "_f_eslint",
+    ".eslintrc.js": "_f_eslint",
+    ".eslintrc.mjs": "_f_eslint",
+    "eslint.config.js": "_f_eslint",
+    "eslint.config.mjs": "_f_eslint",
+
+    "serverless.yml": "_f_serverless",
+    "serverless.yaml": "_f_serverless",
+
+    "routeTree.gen.ts": "_f_tanstack",
+
+    "nx.json": "_f_nx",
+    "nx-workspace.json": "_f_nx",
+    "project.json": "_f_nx",
+
+    "biome.json": "_f_biome",
+
+    "package.json": "_f_node",
+    ".nvmrc": "_f_node",
+
+    ".env": "_f_env",
+    ".env.local": "_f_env",
+    ".env.production": "_f_env",
+    ".env.prod": "_f_env",
+    ".env.staging": "_f_env",
+    ".env.stag": "_f_env",
+    ".env.development": "_f_env",
+    ".env.dev": "_f_env",
+    ".env.test": "_f_env",
+    ".env.temp": "_f_env",
+    ".env.template": "_f_env",
+    ".env.example": "_f_env",
+    ".env.exam": "_f_env",
+
+    "bitbucket-pipelines.yml": "_f_bitbucket",
+    "bitbucket-pipelines.yaml": "_f_bitbucket",
+
+    "vite.config.mts": "_f_vite",
+    "vite.config.ts": "_f_vite",
+    "vite.config.js": "_f_vite",
+    "vite.config.cjs": "_f_vite",
+    "vite.workspace.mts": "_f_vite",
+    "vite.workspace.ts": "_f_vite",
+    "vite.workspace.js": "_f_vite",
+    "vite.workspace.cjs": "_f_vite",
+
+    "vitest.config.mts": "_f_vitest",
+    "vitest.config.ts": "_f_vitest",
+    "vitest.config.js": "_f_vitest",
+    "vitest.config.cjs": "_f_vitest",
+    "vitest.workspace.mts": "_f_vitest",
+    "vitest.workspace.ts": "_f_vitest",
+    "vitest.workspace.js": "_f_vitest",
+    "vitest.workspace.cjs": "_f_vitest",
+
+    "LICENSE": "_f_certificate",
+
+    ".npmrc": "_f_npm",
+
+    "yarn.lock": "_f_yarn",
+    ".yarnrc.yml": "_f_yarn",
+
+    "pnpm-lock.yaml": "_f_pnpm",
+    "pnpm-lock.yml": "_f_pnpm",
+    "pnpm-workspace.yaml": "_f_pnpm",
+    "pnpm-workspace.yml": "_f_pnpm",
+
+    ".prettierrc.yml": "_f_prettier",
+    ".prettierrc.yaml": "_f_prettier",
+    ".prettierrc.json": "_f_prettier",
+    ".prettierrc.js": "_f_prettier",
+    ".prettierrc": "_f_prettier",
+    "prettier.config.js": "_f_prettier",
+    ".prettierignore": "_f_prettier",
+
+    ".huskyrc": "_f_husky",
+    "husky.config.js": "_f_husky",
+
+    ".gitattributes": "_f_git",
+    ".gitconfig": "_f_git",
+    ".gitignore": "_f_git",
+    ".gitmodules": "_f_git",
+    ".gitkeep": "_f_git",
+
+    "README.md": "_f_markdown",
+    "README.markdown": "_f_markdown",
+    "README": "_f_markdown",
+
+    "tsconfig.json": "_f_tsconfig",
+    "tsconfig.base.json": "_f_tsconfig",
+    "tsconfig.build.json": "_f_tsconfig",
+    "tsconfig.dev.json": "_f_tsconfig",
+    "tsconfig.prod.json": "_f_tsconfig"
+  },
+  "folderNames": {
+    "libs": "_fd_lib",
+    "components": "_fd_lib",
+    "views": "_fd_lib",
+
+    "assets": "_fd_cloud",
+    "public": "_fd_cloud",
+
+    "pages": "_fd_links",
+    "types": "_fd_links",
+    "__tests__": "_fd_links",
+    ".vscode": "_fd_links",
+    ".github": "_fd_links",
+    ".gitlab": "_fd_links",
+    ".yarn": "_fd_links",
+    ".husky": "_fd_links",
+
+    "src": "_fd_code",
+
+    ".nx": "_fd_block",
+    ".vite": "_fd_block",
+    ".esbuild": "_fd_block",
+    ".serverless": "_fd_block",
+    "node_modules": "_fd_block",
+    "dist": "_fd_block",
+    "out": "_fd_block",
+    "build": "_fd_block"
+  },
+  "languageIds": {
+    "python": "_f_python",
+    "svg": "_f_svg",
+    "markdown": "_f_markdown",
+    "biome_syntax_tree": "_f_biome",
+    "graphql": "_f_graphql",
+    "csharp": "_f_csharp",
+    "dockerfile": "_f_docker",
+    "dockercompose": "_f_docker",
+    "git-commit": "_f_git",
+    "git-rebase": "_f_git",
+    "dotenv": "_f_env",
+    "html": "_f_html",
+    "xml": "_f_xml",
+    "yaml": "_f_yaml",
+    "css": "_f_css",
+    "sass": "_f_sass",
+    "scss": "_f_sass",
+    "typescript": "_f_typescript",
+    "javascript": "_f_js",
+    "typescriptreact": "_f_react",
+    "javascriptreact": "_f_react",
+    "snippets": "_f_json",
+    "json": "_f_json",
+    "jsonl": "_f_json",
+    "jsonc": "_f_json"
+  },
+  "iconDefinitions": {
+    "_f_changelog": {
+      "iconPath": "../icons/changelog.svg"
+    },
+    "_f_srcmap": {
+      "iconPath": "../icons/srcmap.svg"
+    },
+    "_f_img": {
+      "iconPath": "../icons/img.svg"
+    },
+    "_f_links": {
+      "iconPath": "../icons/links.svg"
+    },
+    "_f_copilot": {
+      "iconPath": "../icons/copilot.svg"
+    },
+    "_fd_lib": {
+      "iconPath": "../icons/folder-library.svg"
+    },
+    "_fd_cloud": {
+      "iconPath": "../icons/folder-cloud.svg"
+    },
+    "_fd_links": {
+      "iconPath": "../icons/folder-links.svg"
+    },
+    "_fd_code": {
+      "iconPath": "../icons/folder-code.svg"
+    },
+    "_fd_block": {
+      "iconPath": "../icons/folder-block.svg"
+    },
+    "_f_python": {
+      "iconPath": "../icons/python.svg"
+    },
+    "_f_graphql": {
+      "iconPath": "../icons/graphql.svg"
+    },
+    "_f_csharp": {
+      "iconPath": "../icons/csharp.svg"
+    },
+    "_f_zip": {
+      "iconPath": "../icons/zip.svg"
+    },
+    "_f_docker": {
+      "iconPath": "../icons/docker.svg"
+    },
+    "_f_yaml": {
+      "iconPath": "../icons/yaml.svg"
+    },
+    "_f_xml": {
+      "iconPath": "../icons/xml.svg"
+    },
+    "_f_eslint": {
+      "iconPath": "../icons/eslint.svg"
+    },
+    "_f_serverless": {
+      "iconPath": "../icons/sls.svg"
+    },
+    "_f_tanstack": {
+      "iconPath": "../icons/tanstack.svg"
+    },
+    "_f_nx": {
+      "iconPath": "../icons/nx.svg"
+    },
+    "_f_css": {
+      "iconPath": "../icons/css.svg"
+    },
+    "_f_sass": {
+      "iconPath": "../icons/sass.svg"
+    },
+    "_f_biome": {
+      "iconPath": "../icons/biome.svg"
+    },
+    "_f_github": {
+      "iconPath": "../icons/github.svg"
+    },
+    "_fd_github": {
+      "iconPath": "../icons/github-folder.svg"
+    },
+    "_f_env": {
+      "iconPath": "../icons/env.svg"
+    },
+    "_f_svg": {
+      "iconPath": "../icons/svg.svg"
+    },
+    "_f_bitbucket": {
+      "iconPath": "../icons/bitbucket.svg"
+    },
+    "_f_node": {
+      "iconPath": "../icons/node.svg"
+    },
+    "_f_html": {
+      "iconPath": "../icons/html.svg"
+    },
+    "_f_vite": {
+      "iconPath": "../icons/vite.svg"
+    },
+    "_f_vitest": {
+      "iconPath": "../icons/vitest.svg"
+    },
+    "_f_certificate": {
+      "iconPath": "../icons/certificate.svg"
+    },
+    "_f_npm": {
+      "iconPath": "../icons/npm.svg"
+    },
+    "_f_yarn": {
+      "iconPath": "../icons/yarn.svg"
+    },
+    "_f_pnpm": {
+      "iconPath": "../icons/pnpm.svg"
+    },
+    "_f_prettier": {
+      "iconPath": "../icons/prettier.svg"
+    },
+    "_f_husky": {
+      "iconPath": "../icons/husky.svg"
+    },
+    "_f_js": {
+      "iconPath": "../icons/js.svg"
+    },
+    "_f_git": {
+      "iconPath": "../icons/git.svg"
+    },
+    "_f_markdown": {
+      "iconPath": "../icons/markdown.svg"
+    },
+    "_f_tsconfig": {
+      "iconPath": "../icons/tsconfig.svg"
+    },
+    "_f_typescript": {
+      "iconPath": "../icons/typescript.svg"
+    },
+    "_f_typescriptdef": {
+      "iconPath": "../icons/typescriptdef.svg"
+    },
+    "_f_json": {
+      "iconPath": "../icons/json.svg"
+    },
+    "_f_react": {
+      "iconPath": "../icons/react.svg"
+    },
+    "_f_vscode": {
+      "iconPath": "../icons/vscode.svg"
+    },
+    "_file": {
+      "iconPath": "../icons/file.svg"
+    },
+    "_folder": {
+      "iconPath": "../icons/folder.svg"
+    },
+    "_folder_open": {
+      "iconPath": "../icons/folder-open.svg"
+    }
+  }
+}

@@ -4,7 +4,16 @@
 vsc-extension-quickstart.md
 assets/**
 .github/
-node_modules
 .gitattributes
 *.vsix
 pnpm-lock.yaml
+
+src/**
+out/**
+node_modules/**
+dist/**/test/**
+esbuild.js
+**/tsconfig.json
+**/*.map
+**/*.ts
+**/.vscode-test.*
