@@ -17,7 +17,7 @@
     "polyms"
   ],
   "homepage": "https://github.com/polyms/vscode",
-  "icon": "assets/logo.png",
+  "icon": "assets/favicon.png",
   "activationEvents": [],
   "contributes": {
     "themes": [
@@ -43,14 +43,13 @@
   },
   "main": "./dist/extension.js",
   "scripts": {
-    "package": "vsce package",
+    "build": "node esbuild.js",
+    "package": "pnpm build && vsce package",
     "publish": "vsce publish",
-    "vscode:prepublish": "pnpm run package",
     "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
     "watch": "npm-run-all -p watch:*",
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
-    "package1": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
@@ -65,5 +64,9 @@
     "@vscode/vsce": "^3.6.2",
     "esbuild": "^0.25.12",
     "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polyms/vscode.git"
   }
 }

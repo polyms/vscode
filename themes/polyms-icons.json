@@ -4,6 +4,16 @@
   "folder": "_folder",
   "folderExpanded": "_folder_open",
   "fileExtensions": {
+    "sh": "_f_terminal",
+
+    "log": "_f_log",
+
+    "conf": "_f_cog",
+
+    "pub": "_f_key",
+    "pem": "_f_key",
+    "key": "_f_key",
+
     "map": "_f_srcmap",
 
     "png": "_f_img",
@@ -17,6 +27,17 @@
     "webp": "_f_img",
     "avif": "_f_img",
     "psd": "_f_img",
+
+    "mp4": "_f_video",
+    "mkv": "_f_video",
+    "webm": "_f_video",
+    "mov": "_f_video",
+    "avi": "_f_video",
+    "wmv": "_f_video",
+    "flv": "_f_video",
+    "mpg": "_f_video",
+    "mpeg": "_f_video",
+    "m4v": "_f_video",
 
     "service.ts": "_f_links",
 
@@ -64,11 +85,16 @@
     "tsbuildinfo": "_f_json"
   },
   "fileNames": {
+    "id_rsa": "_f_key",
+    "known_hosts": "_f_chat_secure",
+    "known_hosts.old": "_f_chat_secure",
+
     "CHANGELOG.md": "_f_changelog",
 
     ".copilotignore": "_f_copilot",
 
     "Dockerfile": "_f_docker",
+    ".dockerignore": "_f_docker",
     "compose.yaml": "_f_docker",
     "compose.yml": "_f_docker",
     "docker-compose.yaml": "_f_docker",
@@ -193,15 +219,20 @@
     "src": "_fd_code",
 
     ".nx": "_fd_block",
+    ".pnpm": "_fd_block",
+    ".bin": "_fd_block",
     ".vite": "_fd_block",
     ".esbuild": "_fd_block",
     ".serverless": "_fd_block",
+    ".tanstack": "_fd_block",
     "node_modules": "_fd_block",
     "dist": "_fd_block",
     "out": "_fd_block",
+    "tmp": "_fd_block",
     "build": "_fd_block"
   },
   "languageIds": {
+    "ignore": "_f_ignore",
     "python": "_f_python",
     "svg": "_f_svg",
     "markdown": "_f_markdown",
@@ -229,6 +260,24 @@
     "jsonc": "_f_json"
   },
   "iconDefinitions": {
+    "_f_ignore": {
+      "iconPath": "../icons/ignore.svg"
+    },
+    "_f_terminal": {
+      "iconPath": "../icons/terminal.svg"
+    },
+    "_f_log": {
+      "iconPath": "../icons/log.svg"
+    },
+    "_f_cog": {
+      "iconPath": "../icons/cog.svg"
+    },
+    "_f_chat_secure": {
+      "iconPath": "../icons/chat-secure.svg"
+    },
+    "_f_key": {
+      "iconPath": "../icons/key.svg"
+    },
     "_f_changelog": {
       "iconPath": "../icons/changelog.svg"
     },
@@ -237,6 +286,9 @@
     },
     "_f_img": {
       "iconPath": "../icons/img.svg"
+    },
+    "_f_video": {
+      "iconPath": "../icons/video.svg"
     },
     "_f_links": {
       "iconPath": "../icons/links.svg"

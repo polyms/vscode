@@ -2,7 +2,6 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
-assets/**
 .github/
 .gitattributes
 *.vsix
@@ -17,3 +16,5 @@ esbuild.js
 **/*.map
 **/*.ts
 **/.vscode-test.*
+
+biome.json
