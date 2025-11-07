@@ -2,7 +2,7 @@
   "name": "vscode",
   "displayName": "Polyms",
   "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "polyms",
   "engines": {
     "vscode": "^1.105.0"
@@ -49,7 +49,7 @@
     "lint": "biome check .",
     "format": "biome format . --write",
     "watch": "node esbuild.js --watch",
-    "release": "release-it patch"
+    "release": "release-it --ci --increment patch"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.3",

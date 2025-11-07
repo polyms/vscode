@@ -1,13 +1,13 @@
 git:
+  commit: true
   commitMessage: "chore(release): ${version}"
+  tag: true
   tagName: "v${version}"
   requireCleanWorkingDir: false
   push: true
 
 github:
-  release: true
-  assets:
-    - "*.vsix"
+  release: false
 
 npm:
   publish: false
