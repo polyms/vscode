@@ -75,7 +75,7 @@
 
     "code-workplace": "_f_vscode",
     "vscodeignore": "_f_vscode",
-    "vsix": "_f_vscode",
+    "vsix": "_f_package",
     "vsixmanifest": "_f_vscode",
 
     "json": "_f_json",
@@ -260,6 +260,9 @@
     "jsonc": "_f_json"
   },
   "iconDefinitions": {
+    "_f_package": {
+      "iconPath": "../icons/package.svg"
+    },
     "_f_ignore": {
       "iconPath": "../icons/ignore.svg"
     },

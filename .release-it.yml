@@ -1,0 +1,18 @@
+git:
+  commitMessage: "chore(release): ${version}"
+  tagName: "v${version}"
+  requireCleanWorkingDir: false
+  push: true
+
+github:
+  release: true
+  assets:
+    - "*.vsix"
+
+npm:
+  publish: false
+
+hooks:
+  before:init: "pnpm run build && pnpm run package"
+  after:bump: "echo '✅ Version bumped to ${version}'"
+  after:release: "echo '🚀 Released ${version} to GitHub'"
