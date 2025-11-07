@@ -14,5 +14,4 @@ npm:
 
 hooks:
   before:init: "pnpm run build && pnpm run package"
-  after:bump: "echo '✅ Version bumped to ${version}'"
-  after:release: "echo '🚀 Released ${version} to GitHub'"
+  after:bump: "echo '🚀 Version bumped to ${version}'"
