@@ -1,0 +1,28 @@
+name: Build & Release VSCode Extension
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: corepack enable && pnpm install
+      - run: pnpm run lint
+      - run: pnpm run build
+      - run: pnpm run package
+      - uses: actions/upload-artifact@v5
+        with:
+          name: polyms-vscode
+          path: "*.vsix"
+      - uses: softprops/action-gh-release@v2.4.1
+        with:
+          files: "*.vsix"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

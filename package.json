@@ -29,7 +29,7 @@
     ],
     "iconThemes": [
       {
-        "id": "polyms-icons",
+        "id": "polyms-vs",
         "label": "Polyms",
         "path": "./themes/polyms-icons.json"
       }
@@ -46,16 +46,9 @@
     "build": "node esbuild.js",
     "package": "pnpm build && vsce package",
     "publish": "vsce publish",
-    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
-    "watch": "npm-run-all -p watch:*",
-    "watch:esbuild": "node esbuild.js --watch",
-    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
-    "check-types": "tsc --noEmit",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "lint": "biome check .",
+    "format": "biome format . --write",
+    "watch": "node esbuild.js --watch"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.3",
