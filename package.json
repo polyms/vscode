@@ -2,12 +2,13 @@
   "name": "vscode",
   "displayName": "Polyms",
   "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "polyms",
   "engines": {
     "vscode": "^1.105.0"
   },
   "categories": [
+    "Extension Packs",
     "Themes",
     "Other"
   ],
@@ -34,6 +35,28 @@
         "path": "./themes/polyms-icons.json"
       }
     ],
+    "grammars": [
+      {
+        "path": "./syntaxes/sql-highlight.json",
+        "scopeName": "inline-sql.injection",
+        "injectTo": [
+          "source.python",
+          "source.java",
+          "source.ruby",
+          "source.cs",
+          "source.js",
+          "source.ts",
+          "source.vue",
+          "source.svelte",
+          "source.tsx",
+          "source.rust",
+          "text.html.php"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.sql": "sql"
+        }
+      }
+    ],
     "commands": [
       {
         "command": "polyms.helloWorld",
@@ -41,6 +64,20 @@
       }
     ]
   },
+  "extensionPack": [
+    "mhutchie.git-graph",
+    "christian-kohler.path-intellisense",
+    "pflannery.vscode-versionlens",
+    "redhat.vscode-yaml",
+    "bradlc.vscode-tailwindcss",
+    "vitest.explorer",
+    "redhat.vscode-xml",
+    "esbenp.prettier-vscode",
+    "biomejs.biome",
+    "eamodio.gitlens",
+    "dbaeumer.vscode-eslint",
+    "mikestead.dotenv"
+  ],
   "main": "./dist/extension.js",
   "scripts": {
     "build": "node esbuild.js",
