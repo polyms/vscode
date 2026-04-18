@@ -2,10 +2,10 @@
   "name": "vscode",
   "displayName": "Polyms",
   "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "polyms",
   "engines": {
-    "vscode": "^1.105.0"
+    "vscode": ">=1.105.0"
   },
   "categories": [
     "Extension Packs",
@@ -21,6 +21,26 @@
   "icon": "assets/favicon.png",
   "activationEvents": [],
   "contributes": {
+    "languages": [
+      {
+        "id": "dotenv",
+        "aliases": [
+          "Dotenv",
+          "Environment variables"
+        ],
+        "extensions": [
+          ".env"
+        ],
+        "filenames": [
+          ".env"
+        ],
+        "filenamePatterns": [
+          "**/.env.*",
+          "**/*.env"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
     "themes": [
       {
         "label": "Polyms",
@@ -36,6 +56,11 @@
       }
     ],
     "grammars": [
+      {
+        "language": "dotenv",
+        "scopeName": "source.dotenv",
+        "path": "./syntaxes/dotenv.tmLanguage.json"
+      },
       {
         "path": "./syntaxes/sql-highlight.json",
         "scopeName": "inline-sql.injection",
@@ -75,8 +100,7 @@
     "esbenp.prettier-vscode",
     "biomejs.biome",
     "eamodio.gitlens",
-    "dbaeumer.vscode-eslint",
-    "mikestead.dotenv"
+    "dbaeumer.vscode-eslint"
   ],
   "main": "./dist/extension.js",
   "scripts": {
@@ -89,13 +113,13 @@
     "release": "release-it --ci --increment patch"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.3",
-    "@types/node": "^24.10.0",
-    "@types/vscode": "^1.105.0",
-    "@vscode/vsce": "^3.6.2",
-    "esbuild": "^0.25.12",
-    "release-it": "^19.0.6",
-    "typescript": "^5.9.3"
+    "@biomejs/biome": "^2.4.12",
+    "@types/node": "^24.12.2",
+    "@types/vscode": "1.105.0",
+    "@vscode/vsce": "^3.9.1",
+    "esbuild": "^0.28.0",
+    "release-it": "^20.0.0",
+    "typescript": "^6.0.3"
   },
   "repository": {
     "type": "git",

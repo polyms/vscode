@@ -1,0 +1,200 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Dotenv",
+  "scopeName": "source.dotenv",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#assignment"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "comment": "Comments — #",
+      "name": "comment.line.number-sign.dotenv",
+      "match": "^[ \\t]*(#).*$",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.comment.dotenv"
+        }
+      }
+    },
+    "assignment": {
+      "begin": "^[ \\t]*(?:(?i)(export)[ \\t]+)?([A-Za-z_][A-Za-z0-9_]*)[ \\t]*(=)[ \\t]*",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.export.dotenv"
+        },
+        "2": {
+          "name": "variable.other.dotenv"
+        },
+        "3": {
+          "name": "keyword.operator.assignment.dotenv"
+        }
+      },
+      "end": "$",
+      "patterns": [
+        {
+          "include": "#value"
+        }
+      ]
+    },
+    "value": {
+      "patterns": [
+        {
+          "include": "#string-double"
+        },
+        {
+          "include": "#string-single"
+        },
+        {
+          "name": "constant.language.dotenv",
+          "match": "(?i)(true|false|null)(?=\\s*$)"
+        },
+        {
+          "name": "constant.numeric.dotenv",
+          "match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b(?=\\s*$)"
+        },
+        {
+          "comment": "Unquoted: ${}, {}, $VAR anywhere on the line (not one greedy match)",
+          "begin": "(?=.)",
+          "end": "$",
+          "applyEndPatternLast": 1,
+          "patterns": [
+            {
+              "include": "#interpolation"
+            },
+            {
+              "include": "#escape-characters"
+            },
+            {
+              "include": "#variable-in-string"
+            },
+            {
+              "match": "[^$\\{\\r\\n\\\\]+",
+              "name": "string.unquoted.dotenv"
+            },
+            {
+              "match": "[$\\{]",
+              "name": "string.unquoted.dotenv"
+            },
+            {
+              "comment": "Lone \\ at EOL (incomplete escape)",
+              "match": "\\\\",
+              "name": "string.unquoted.dotenv"
+            }
+          ]
+        }
+      ]
+    },
+    "string-double": {
+      "name": "string.quoted.double.dotenv",
+      "applyEndPatternLast": 1,
+      "begin": "(\")",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.begin.dotenv"
+        }
+      },
+      "end": "(\")",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.dotenv"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#interpolation"
+        },
+        {
+          "include": "#escape-characters"
+        },
+        {
+          "include": "#variable-in-string"
+        }
+      ]
+    },
+    "string-single": {
+      "name": "string.quoted.single.dotenv",
+      "applyEndPatternLast": 1,
+      "begin": "(')",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.begin.dotenv"
+        }
+      },
+      "end": "(')",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.dotenv"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#escape-characters-single"
+        }
+      ]
+    },
+    "interpolation": {
+      "comment": "Template: \"foo ${bar}\" / \"{$baz}\"",
+      "begin": "(\\$\\{|\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "string.interpolated.dotenv keyword.other.template.begin.dotenv"
+        }
+      },
+      "end": "(\\})",
+      "endCaptures": {
+        "1": {
+          "name": "string.interpolated.dotenv keyword.other.template.end.dotenv"
+        }
+      },
+      "patterns": [
+        {
+          "match": "(?x)(\\$+)?([a-zA-Z_\\x{7f}-\\xff][a-zA-Z0-9_\\x{7f}-\\xff]*?\\b)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.variable.dotenv variable.other.dotenv"
+            },
+            "2": {
+              "name": "variable.other.dotenv"
+            }
+          }
+        }
+      ]
+    },
+    "variable-in-string": {
+      "patterns": [
+        {
+          "match": "(?x)(\\$+)([a-zA-Z_\\x{7f}-\\xff][a-zA-Z0-9_\\x{7f}-\\xff]*?\\b)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.variable.dotenv variable.other.dotenv"
+            },
+            "2": {
+              "name": "variable.other.dotenv"
+            }
+          }
+        }
+      ]
+    },
+    "escape-characters": {
+      "patterns": [
+        {
+          "match": "\\\\[nrt\\\\$\"']",
+          "name": "constant.character.escape.dotenv"
+        }
+      ]
+    },
+    "escape-characters-single": {
+      "patterns": [
+        {
+          "match": "\\\\[nrt\\\\']",
+          "name": "constant.character.escape.dotenv"
+        }
+      ]
+    }
+  }
+}

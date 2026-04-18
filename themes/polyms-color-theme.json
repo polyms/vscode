@@ -1376,8 +1376,8 @@
       }
     },
     {
-      "name": "[ENV] Variable Names",
-      "scope": "source.env",
+      "name": "[ENV] Variable names",
+      "scope": "source.dotenv",
       "settings": {
         "foreground": "#A3BE8C"
       }
