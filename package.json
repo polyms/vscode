@@ -1,8 +1,8 @@
 {
   "name": "vscode",
   "displayName": "Polyms",
-  "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
-  "version": "0.0.8",
+  "description": "Polyms themes, file icons, and built-in AI Kit MCP integration for Visual Studio Code.",
+  "version": "0.0.10",
   "publisher": "polyms",
   "engines": {
     "vscode": ">=1.105.0"
@@ -15,11 +15,12 @@
   "keywords": [
     "icon-theme",
     "theme",
-    "polyms"
+    "polyms",
+    "mcp",
+    "ai-kit"
   ],
   "homepage": "https://github.com/polyms/vscode",
   "icon": "assets/favicon.png",
-  "activationEvents": [],
   "contributes": {
     "languages": [
       {
@@ -82,12 +83,23 @@
         }
       }
     ],
-    "commands": [
+    "mcpServerDefinitionProviders": [
       {
-        "command": "polyms.helloWorld",
-        "title": "Hello World"
+        "id": "polyms.aiKit",
+        "label": "AI Kit"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Polyms",
+      "properties": {
+        "polyms.aiKitMcp.enabled": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "Provide the AI Kit remote MCP server to VS Code Copilot Chat. Authentication is handled by VS Code when connecting."
+        }
+      }
+    }
   },
   "extensionPack": [
     "mhutchie.git-graph",
@@ -104,8 +116,9 @@
   ],
   "main": "./dist/extension.js",
   "scripts": {
-    "build": "node esbuild.js",
-    "package": "pnpm build && vsce package",
+    "typecheck": "tsc --noEmit",
+    "build": "pnpm run typecheck && node esbuild.js",
+    "package": "pnpm run build && vsce package",
     "publish": "vsce publish",
     "lint": "biome check .",
     "format": "biome format . --write",
@@ -113,16 +126,17 @@
     "release": "release-it --ci --increment patch"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.12",
-    "@types/node": "^24.12.2",
+    "@biomejs/biome": "^2.6.8",
+    "@types/node": "^26.6.6",
     "@types/vscode": "1.105.0",
-    "@vscode/vsce": "^3.9.1",
-    "esbuild": "^0.28.0",
-    "release-it": "^20.0.0",
-    "typescript": "^6.0.3"
+    "@vscode/vsce": "^4.1.1",
+    "esbuild": "^0.28.2",
+    "release-it": "^21.1.2",
+    "typescript": "^7.0.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/polyms/vscode.git"
-  }
+  },
+  "packageManager": "pnpm@12.14.0+sha512.c18ba6d87993d3d164cb5e8948f32b2c06ee854487e06cd8d86781342fb3e5bb4634367034711e86802baa9c37bea906ce1929ad08d70884c97d801df13389a6"
 }
