@@ -173,8 +173,8 @@ importers:
         specifier: ^26.6.6
         version: 26.6.6
       '@types/vscode':
-        specifier: 1.146.0
-        version: 1.146.0
+        specifier: 1.105.0
+        version: 1.105.0
       '@vscode/vsce':
         specifier: ^4.1.1
         version: 4.1.1
@@ -770,8 +770,8 @@ packages:
   '@types/parse-path@7.0.3':
     resolution: {integrity: sha512-LriObC2+KYZD3FzCrgWGv/qufdUy4eXrxcLgQMfYXgPbLIecKIsVBaQgUPmxSSLcjmYbDTQbMgr6qr6l/eb7Bg==}
 
-  '@types/vscode@1.146.0':
-    resolution: {integrity: sha512-OtU25faeM997QQsW+D07FN9cX06j+EEI4aQaPw/UO3HWlCM39N1W7fG8ewhdZKluut31KffyMsmDzJzgMu6t8Q==}
+  '@types/vscode@1.105.0':
+    resolution: {integrity: sha512-Lotk3CTFlGZN8ray4VxJE7axIyLZZETQJVWi/lYoUVQuqfRxlQhVOfoejsD2V3dVXPSbS15ov5ZyowMAzgUqcw==}
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     resolution: {integrity: sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==}
@@ -2168,7 +2168,7 @@ snapshots:
 
   '@types/parse-path@7.0.3': {}
 
-  '@types/vscode@1.146.0': {}
+  '@types/vscode@1.105.0': {}
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     optional: true
