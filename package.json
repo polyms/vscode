@@ -1,7 +1,7 @@
 {
   "name": "vscode",
   "displayName": "Polyms",
-  "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
+  "description": "Polyms themes, file icons, and built-in AI Kit MCP integration for Visual Studio Code.",
   "version": "0.0.8",
   "publisher": "polyms",
   "engines": {
@@ -15,11 +15,12 @@
   "keywords": [
     "icon-theme",
     "theme",
-    "polyms"
+    "polyms",
+    "mcp",
+    "ai-kit"
   ],
   "homepage": "https://github.com/polyms/vscode",
   "icon": "assets/favicon.png",
-  "activationEvents": [],
   "contributes": {
     "languages": [
       {
@@ -82,12 +83,23 @@
         }
       }
     ],
-    "commands": [
+    "mcpServerDefinitionProviders": [
       {
-        "command": "polyms.helloWorld",
-        "title": "Hello World"
+        "id": "polyms.aiKit",
+        "label": "AI Kit"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Polyms",
+      "properties": {
+        "polyms.aiKitMcp.enabled": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "Provide the AI Kit remote MCP server to VS Code Copilot Chat. Authentication is handled by VS Code when connecting."
+        }
+      }
+    }
   },
   "extensionPack": [
     "mhutchie.git-graph",
@@ -104,8 +116,9 @@
   ],
   "main": "./dist/extension.js",
   "scripts": {
-    "build": "node esbuild.js",
-    "package": "pnpm build && vsce package",
+    "typecheck": "tsc --noEmit",
+    "build": "pnpm run typecheck && node esbuild.js",
+    "package": "pnpm run build && vsce package",
     "publish": "vsce publish",
     "lint": "biome check .",
     "format": "biome format . --write",

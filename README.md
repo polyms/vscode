@@ -1,16 +1,27 @@
-# polyms README
+# Polyms for Visual Studio Code
 
-## Working with Markdown
+Polyms includes the **Polyms color theme**, **file icon theme**, editor language support, and a curated extension pack. It also provides [AI Kit](https://ai-kit.polyms.dev) as a remote MCP server for VS Code's Copilot Chat.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## AI Kit MCP
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+After installing Polyms, open **Chat** in VS Code. VS Code can discover the **AI Kit** MCP server from the extension, so you do not need to create or edit `.vscode/mcp.json` manually.
 
-## For more information
+- MCP URL: `https://ai-kit.polyms.dev/mcp` (Streamable HTTP).
+- Authentication: VS Code handles the server's OAuth sign-in and consent when prompted; installing the extension does not sign you in automatically.
+- MCP tools: AI Kit exposes knowledge retrieval and skill-pack discovery/retrieval, subject to your account's access.
+- Turn the integration off in Settings using **Polyms: AI Kit MCP: Enabled** (`polyms.aiKitMcp.enabled`). Changes update the registered server definitions without restarting VS Code.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+This registration is for the VS Code extension host and supported Copilot sessions. It does not configure standalone Cursor, Claude Code, or Copilot CLI installations, nor does it automatically install AI Kit's native Agent Skills.
 
-**Enjoy!**
+## Building
+
+Requires Node.js 24 and pnpm 10.
+
+```sh
+pnpm install --frozen-lockfile
+pnpm run typecheck
+pnpm run build
+pnpm run package
+```
+
+`build` runs TypeScript's no-emit type check before bundling with esbuild. `package` repeats the validated build before creating a VSIX.
