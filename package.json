@@ -126,13 +126,13 @@
     "release": "release-it --ci --increment patch"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.12",
-    "@types/node": "^24.12.2",
-    "@types/vscode": "1.105.0",
-    "@vscode/vsce": "^3.9.1",
-    "esbuild": "^0.28.0",
-    "release-it": "^20.0.0",
-    "typescript": "^6.0.3"
+    "@biomejs/biome": "^2.6.8",
+    "@types/node": "24",
+    "@types/vscode": "1.146.0",
+    "@vscode/vsce": "^4.1.1",
+    "esbuild": "^0.28.2",
+    "release-it": "^21.1.2",
+    "typescript": "^7.0.2"
   },
   "repository": {
     "type": "git",
