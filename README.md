@@ -15,7 +15,7 @@ This registration is for the VS Code extension host and supported Copilot sessio
 
 ## Building
 
-Requires Node.js 26.x and pnpm 10.
+Requires Node.js 26.x and the pnpm version pinned in `package.json` (`packageManager`).
 
 ```sh
 pnpm install --frozen-lockfile
